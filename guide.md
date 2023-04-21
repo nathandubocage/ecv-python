@@ -24,7 +24,7 @@ import matplotlib.pyplot as plt
 from subprocess import check_output
 print(check_output(["ls", "./input"]).decode("utf8"))
 
-data = pd.read_csv('./student.csv')
+data = pd.read_csv('./sample_data/student.csv')
 data.columns
 
 plt.figure(figsize=(15,15))
@@ -37,3 +37,7 @@ plt.yticks(rotation = 0)
 
 - Le dataset se trouve dans files/student.csv
 - Le modèle entrainé se trouve dans files/model.pkl
+
+# Modèle de données
+
+Le code de l'entraînement du modèle de données se trouve dans files/training.ipynb
