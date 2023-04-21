@@ -29,18 +29,17 @@ def form(request):
                 'goout': int(goout),
             }
 
-            # headers = {'Content-Type': 'application/json'}
-            # url = 'http://localhost:8000/predict'
-            # response = requests.post(url, data=json.dumps(form_data), headers=headers)
+            headers = {'Content-Type': 'application/json'}
+            url = 'http://localhost:8000/predict'
+            response = requests.post(url, data=json.dumps(form_data), headers=headers)
 
-            # if response.status_code == 200:
-            #     print('Requête envoyée avec succès')
-            #     return render(request, 'prediction.html', {'data': response.json()})
-            # else:
-            #     print('Erreur lors de l\'envoi de la requête:', response.status_code)
-
-            return render(request, 'prediction.html', {'data': {"prediction": 3.0}})
-
+            if response.status_code == 200:
+                print('Requête envoyée avec succès')
+                response_data = response.json()
+                score = response_data.get('prediction', 'Erreur lors de la récupération du score')
+                return render(request, 'prediction.html', {'form': form, 'data': { "prediction": score }})
+            else:
+                print('Erreur lors de l\'envoi de la requête:', response.status_code)
             
         else:
             return render(request, 'form.html', {'form': form})

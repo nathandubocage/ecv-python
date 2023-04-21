@@ -1,109 +1,149 @@
 <div class="container">
   <h1>Vas-tu finir serveur chez MacDo ?</h1>
-  <form method="post" action="">
-    {% csrf_token %}
-    <div class="form-group">
-      <label for="{{ form.name.id_for_label }}">Quel est ton prénom ?</label>
-      {{ form.name }}
-    </div>
-    <div class="form-group">
-      <label for="{{ form.age.id_for_label }}">Quel âge as-tu ?</label>
-      {{ form.age }}
-    </div>
-    <div class="form-group">
-      <label for="{{ form.freetime.id_for_label }}"
-        >As-tu beaucoup de temps disponible après les cours ?</label
-      >
-      <select name="freetime">
-        <option value="1">Peu de temps libre</option>
-        <option value="2">Parfois du temps libre</option>
-        <option value="3">Beaucoup de temps libre</option>
-        <option value="4">Je suis Master sur LOL</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="{{ form.traveltime.id_for_label }}"
-        >As-tu beaucoup de temps de trajet pour aller à l'école ?</label
-      >
-      <select name="traveltime">
-        <option value="1">Moins 15 minutes</option>
-        <option value="2">De 15 à 30 minutes</option>
-        <option value="3">De 30 minutes à 1 heure</option>
-        <option value="4">Plus d'une heure</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="{{ form.health.id_for_label }}"
-        >As-tu des problèmes de santé ?</label
-      >
-      <select name="health">
-        <option value="1">Aucun problème</option>
-        <option value="2">Parfois quelques problèmes</option>
-        <option value="3">Quelques problèmes</option>
-        <option value="4">Beaucoup de problèmes</option>
-        <option value="5">Énormèment de problèmes</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="{{ form.absences.id_for_label }}"
-        >Quel est ton nombre d'absences ?</label
-      >
-      <select name="absences">
-        <option value="1">Moins de 10 abscences par an</option>
-        <option value="2">Moins de 20 abscences par an</option>
-        <option value="3">Moins de 30 abscences par an</option>
-        <option value="4">Je sèche tous les vendredis</option>
-        <option value="5">
-          Madame Pavoshko la professeur de français ne m'a jamais vu
-        </option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="{{ form.Walc.id_for_label }}"
-        >Quel est ta consommation d'alcool par semaine ?</label
-      >
-      <select name="Walc">
-        <option value="1">Occasionnellement</option>
-        <option value="2">Si on me propose je ne dis pas non</option>
-        <option value="3">Quelques verres</option>
-        <option value="4">Je bois beaucoup</option>
-        <option value="5">Je suis un énorme cavot</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="{{ form.Dalc.id_for_label }}"
-        >Quel est ta consommation d'alcool par jour ?</label
-      >
-      <select name="Dalc">
-        <option value="1">Occasionnellement</option>
-        <option value="2">Jusqu'à 2 verres pas plus</option>
-        <option value="3">Quelques verres</option>
-        <option value="4">Je bois beaucoup</option>
-        <option value="5">Je suis un énorme cavot</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="{{ form.goout.id_for_label }}">Sors-tu beaucoup ?</label>
-      <select name="goout">
-        <option value="1">Un peu</option>
-        <option value="2">Ça m'arrive</option>
-        <option value="3">Régulièrement</option>
-        <option value="4">Très régulièrement</option>
-        <option value="5">Tout le temps</option>
-      </select>
-    </div>
-    <button type="submit" class="btn">Submit</button>
-  </form>
+  <fieldset>
+    <legend>Compléter le formulaire pour le savoir</legend>
+    <form method="post" action="">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="{{ form.name.id_for_label }}"
+          >🙎‍♂️ Quel est ton prénom ?</label
+        >
+        {{ form.name }}
+      </div>
+      <div class="form-group">
+        <label for="{{ form.age.id_for_label }}">👨‍🦳 Quel âge as-tu ?</label>
+        {{ form.age }}
+      </div>
+      <div class="form-group">
+        <label for="{{ form.freetime.id_for_label }}"
+          >⚽️ As-tu beaucoup de temps disponible après les cours ?</label
+        >
+        <select name="freetime">
+          <option value="1">Peu de temps libre</option>
+          <option value="2">Parfois du temps libre</option>
+          <option value="3">Beaucoup de temps libre</option>
+          <option value="4">Je suis Master sur LOL</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="{{ form.traveltime.id_for_label }}"
+          >🚌 As-tu beaucoup de temps de trajet pour aller à l'école ?</label
+        >
+        <select name="traveltime">
+          <option value="1">Moins 15 minutes</option>
+          <option value="2">De 15 à 30 minutes</option>
+          <option value="3">De 30 minutes à 1 heure</option>
+          <option value="4">Plus d'une heure</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="{{ form.health.id_for_label }}"
+          >⛑️ As-tu des problèmes de santé ?</label
+        >
+        <select name="health">
+          <option value="1">Aucun problème</option>
+          <option value="2">Parfois quelques problèmes</option>
+          <option value="3">Quelques problèmes</option>
+          <option value="4">Beaucoup de problèmes</option>
+          <option value="5">Énormèment de problèmes</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="{{ form.absences.id_for_label }}"
+          >☠️ Quel est ton nombre d'absences ?</label
+        >
+        <select name="absences">
+          <option value="1">Moins de 10 abscences par an</option>
+          <option value="2">Moins de 20 abscences par an</option>
+          <option value="3">Moins de 30 abscences par an</option>
+          <option value="4">Je sèche tous les vendredis</option>
+          <option value="5">
+            Madame Pavoshko la professeur de français ne m'a jamais vu
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="{{ form.Walc.id_for_label }}"
+          >🍷 Quel est ta consommation d'alcool par semaine ?</label
+        >
+        <select name="Walc">
+          <option value="1">Occasionnellement</option>
+          <option value="2">Si on me propose je ne dis pas non</option>
+          <option value="3">Quelques verres</option>
+          <option value="4">Je bois beaucoup</option>
+          <option value="5">Je suis un énorme cavot</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="{{ form.Dalc.id_for_label }}"
+          >🍷 Quel est ta consommation d'alcool par jour ?</label
+        >
+        <select name="Dalc">
+          <option value="1">Occasionnellement</option>
+          <option value="2">Jusqu'à 2 verres pas plus</option>
+          <option value="3">Quelques verres</option>
+          <option value="4">Je bois beaucoup</option>
+          <option value="5">Je suis un énorme cavot</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="{{ form.goout.id_for_label }}">🍷 Sors-tu beaucoup ?</label>
+        <select name="goout">
+          <option value="1">Un peu</option>
+          <option value="2">Ça m'arrive</option>
+          <option value="3">Régulièrement</option>
+          <option value="4">Très régulièrement</option>
+          <option value="5">Tout le temps</option>
+        </select>
+      </div>
+      <button type="submit" class="btn">Envoyer</button>
+    </form>
+  </fieldset>
 </div>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&family=Comfortaa:wght@300;400;500;600;700&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&family=Comfortaa:wght@300;400;500;600;700&display=swap");
   body {
-    font-family: 'Comfortaa', cursive;
+    font-family: "Comfortaa", cursive;
   }
+
   .container {
     width: 80%;
-    margin: 0 auto;
-    background-color: red;
+    margin: 6vh auto;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: "Comfortaa";
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  input,
+  select {
+    width: 480px;
+    font-family: "Comfortaa";
+    padding: 6px 4px;
+    border-radius: 4px;
+    border: 1px solid #dedede;
   }
 </style>
