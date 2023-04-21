@@ -1,0 +1,8 @@
+<h1>Résultat</h1>
+{% if data.prediction <= 1 %}
+    Tu ne finira pas serveur chez macdo
+{% elif data.prediction <= 2 %}
+    Fais gaffe à toi, tu vas finir serveur chez macdo
+{% else %}
+    Un big mac sans cornichon s'il te plaît !
+{% endif %}

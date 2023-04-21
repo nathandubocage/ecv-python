@@ -1,8 +1,5 @@
-<!-- {% load static %} -->
-<!-- <link rel="stylesheet" href="{% static 'css/form.css' %}"> -->
-
 <div class="container">
-  <h1>Hello world</h1>
+  <h1>Vas-tu finir serveur chez MacDo ?</h1>
   <form method="post" action="">
     {% csrf_token %}
     <div class="form-group">
@@ -98,3 +95,15 @@
     <button type="submit" class="btn">Submit</button>
   </form>
 </div>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&family=Comfortaa:wght@300;400;500;600;700&display=swap');
+  body {
+    font-family: 'Comfortaa', cursive;
+  }
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: red;
+  }
+</style>
