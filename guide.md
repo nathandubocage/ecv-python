@@ -48,14 +48,14 @@ Les informations à renseigner dans le body de la requête /predict sont :
 
 ```
 {
-   "age":22,
-   "traveltime":1,
-   "freetime":3,
-   "health":4,
-   "absences":90,
-   "Walc":5,
-   "Dalc":5,
-   "goout":4
+	"age": 18,
+	"traveltime": 1,
+	"freetime": 1,
+	"health": 1,
+	"absences": 1,
+	"Walc": 1,
+	"Dalc": 1,
+	"goout": 1
 }
 ```
 
