@@ -1,3 +1,5 @@
+# Introduction
+
 Ci-dessous, voici le guide et le code que nous avons exécuté sur Google Colab. Nous avons tous les deux un mac M1 donc nous n'avons pas pu entraîner notre modèle de données avec Notebook sur notre machine.
 
 On a d'abord réalisé une heathmap sur notre dataset pour connaître les données qui étaient cohérentes.
@@ -30,3 +32,8 @@ sns.heatmap(data.corr(),annot = True,fmt = ".2f",cbar = True)
 plt.xticks(rotation=90)
 plt.yticks(rotation = 0)
 ```
+
+# Utiles
+
+- Le dataset se trouve dans files/student.csv
+- Le modèle entrainé se trouve dans files/model.pkl
