@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, QueryDict
 from .form import MyForm
 import requests
+import json
 
 def form(request):
     if request.method == 'POST':
@@ -18,21 +19,24 @@ def form(request):
             goout = form.cleaned_data['goout']
 
             form_data = {
-                'age': age,
-                'freetime': freetime,
-                'traveltime': traveltime,
-                'health': health,
-                'absences': absences,
-                'Walc': Walc,
-                'Dalc': Dalc,
-                'goout': goout,
+                'age': int(age),
+                'freetime': int(freetime),
+                'traveltime': int(traveltime),
+                'health': int(health),
+                'absences': int(absences),
+                'Walc': int(Walc),
+                'Dalc': int(Dalc),
+                'goout': int(goout),
             }
 
-            url = 'http://example.com/form'
-            response = requests.post(url, data=form_data)
+            headers = {'Content-Type': 'application/json'}
+            url = 'http://localhost:8000/predict'
+            # response = requests.post(url, data=form_data)
+            response = requests.post(url, data=json.dumps(form_data), headers=headers)
 
             if response.status_code == 200:
                 print('Requête envoyée avec succès')
+                print(response.json())
             else:
                 print('Erreur lors de l\'envoi de la requête:', response.status_code)
 
