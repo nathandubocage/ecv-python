@@ -1,8 +1,30 @@
-<h1>Résultat</h1>
-{% if data.prediction <= 1 %}
-    Tu ne finira pas serveur chez macdo
-{% elif data.prediction <= 2 %}
-    Fais gaffe à toi, tu vas finir serveur chez macdo
-{% else %}
-    Un big mac sans cornichon s'il te plaît !
-{% endif %}
+<div class="container">
+  <h1>Résultat...</h1>
+  {% if data.prediction <= 1 %}
+  <span>✌️ Félicitation. Tu ne finira pas serveur chez macdo</span>
+
+  {% elif data.prediction <= 2 %}
+  <span>🍴Fais gaffe à toi, tu vas finir serveur chez macdo</span>
+
+  {% else %}
+  <span>🍔 Un big mac sans cornichon s'il te plaît !</span>
+
+  {% endif %}
+</div>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&family=Comfortaa:wght@300;400;500;600;700&display=swap");
+  body {
+    font-family: "Comfortaa", cursive;
+  }
+  .container {
+    width: 80%;
+    margin: 6vh auto;
+  }
+  h1{
+    font-size: 4rem;
+  }
+  span{
+    font-size: 2rem;
+  }
+</style>
