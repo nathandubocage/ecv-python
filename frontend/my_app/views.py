@@ -5,19 +5,18 @@ import requests
 
 def form(request):
     if request.method == 'POST':
-        freetime = request.POST.get('form.freetime')
-        traveltime = request.POST.get('form.traveltime')
-        health = request.POST.get('form.health')
-        absences = request.POST.get('form.absences')
-        Walc = request.POST.get('form.Walc')
-        Dalc = request.POST.get('form.Dalc')
-        goout = request.POST.get('form.goout')
-        name = request.POST.get('name')
-        age = request.POST.get('age')
-        form = MyForm([name, age, freetime, traveltime, health, absences, Walc, Dalc, goout]);
+        form = MyForm(request.POST)
         
         if form.is_valid():
-            
+            age = form.cleaned_data['age']
+            freetime = form.cleaned_data['freetime']
+            traveltime = form.cleaned_data['traveltime']
+            health = form.cleaned_data['health']
+            absences = form.cleaned_data['absences']
+            Walc = form.cleaned_data['Walc']
+            Dalc = form.cleaned_data['Dalc']
+            goout = form.cleaned_data['goout']
+
             form_data = {
                 'age': age,
                 'freetime': freetime,

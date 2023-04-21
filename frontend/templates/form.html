@@ -3,7 +3,7 @@
 
 <div class="container">
   <h1>Hello world</h1>
-  <form method="post">
+  <form method="post" action="">
     {% csrf_token %}
     <div class="form-group">
       <label for="{{ form.name.id_for_label }}">Quel est ton prénom ?</label>
@@ -14,8 +14,10 @@
       {{ form.age }}
     </div>
     <div class="form-group">
-      <label for="{{ form.freetime.id_for_label }}">As-tu beaucoup de temps disponible après les cours ?</label>
-      <select name="form.freetime">
+      <label for="{{ form.freetime.id_for_label }}"
+        >As-tu beaucoup de temps disponible après les cours ?</label
+      >
+      <select name="freetime">
         <option value="1">Peu de temps libre</option>
         <option value="2">Parfois du temps libre</option>
         <option value="3">Beaucoup de temps libre</option>
@@ -23,8 +25,10 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="{{ form.traveltime.id_for_label }}">As-tu beaucoup de temps de trajet pour aller à l'école ?</label>
-      <select name="form.traveltime">
+      <label for="{{ form.traveltime.id_for_label }}"
+        >As-tu beaucoup de temps de trajet pour aller à l'école ?</label
+      >
+      <select name="traveltime">
         <option value="1">Moins 15 minutes</option>
         <option value="2">De 15 à 30 minutes</option>
         <option value="3">De 30 minutes à 1 heure</option>
@@ -32,8 +36,10 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="{{ form.health.id_for_label }}">As-tu des problèmes de santé ?</label>
-      <select name="form.health">
+      <label for="{{ form.health.id_for_label }}"
+        >As-tu des problèmes de santé ?</label
+      >
+      <select name="health">
         <option value="1">Aucun problème</option>
         <option value="2">Parfois quelques problèmes</option>
         <option value="3">Quelques problèmes</option>
@@ -42,18 +48,24 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="{{ form.absences.id_for_label }}">Quel est ton nombre d'absences ?</label>
-      <select name="form.absences">
+      <label for="{{ form.absences.id_for_label }}"
+        >Quel est ton nombre d'absences ?</label
+      >
+      <select name="absences">
         <option value="1">Moins de 10 abscences par an</option>
         <option value="2">Moins de 20 abscences par an</option>
         <option value="3">Moins de 30 abscences par an</option>
         <option value="4">Je sèche tous les vendredis</option>
-        <option value="5">Madame Pavoshko la professeur de français ne m'a jamais vu</option>
+        <option value="5">
+          Madame Pavoshko la professeur de français ne m'a jamais vu
+        </option>
       </select>
     </div>
     <div class="form-group">
-      <label for="{{ form.Walc.id_for_label }}">Quel est ta consommation d'alcool par semaine ?</label>
-      <select name="form.Walc">
+      <label for="{{ form.Walc.id_for_label }}"
+        >Quel est ta consommation d'alcool par semaine ?</label
+      >
+      <select name="Walc">
         <option value="1">Occasionnellement</option>
         <option value="2">Si on me propose je ne dis pas non</option>
         <option value="3">Quelques verres</option>
@@ -62,8 +74,10 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="{{ form.Dalc.id_for_label }}">Quel est ta consommation d'alcool par jour ?</label>
-      <select name="form.Dalc">
+      <label for="{{ form.Dalc.id_for_label }}"
+        >Quel est ta consommation d'alcool par jour ?</label
+      >
+      <select name="Dalc">
         <option value="1">Occasionnellement</option>
         <option value="2">Jusqu'à 2 verres pas plus</option>
         <option value="3">Quelques verres</option>
@@ -73,7 +87,7 @@
     </div>
     <div class="form-group">
       <label for="{{ form.goout.id_for_label }}">Sors-tu beaucoup ?</label>
-      <select name="form.goout">
+      <select name="goout">
         <option value="1">Un peu</option>
         <option value="2">Ça m'arrive</option>
         <option value="3">Régulièrement</option>
