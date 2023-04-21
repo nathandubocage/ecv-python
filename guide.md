@@ -41,3 +41,22 @@ plt.yticks(rotation = 0)
 # Modèle de données
 
 Le code de l'entraînement du modèle de données se trouve dans files/training.ipynb
+
+# Body
+
+Les informations à renseigner dans le body de la requête /predict sont :
+
+```
+{
+   "age":22,
+   "traveltime":1,
+   "freetime":3,
+   "health":4,
+   "absences":90,
+   "Walc":5,
+   "Dalc":5,
+   "goout":4
+}
+```
+
+Les indices vont de 1 à 5 pour toutes les données sauf age qui varie entre 17 et 22 et absences qui varie entre 0 à 90.
